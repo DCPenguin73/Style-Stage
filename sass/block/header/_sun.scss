@@ -1,9 +1,8 @@
 header {
-    // background-color: black;
-    // color: white;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 4em;
+    background: radial-gradient(circle, #f0faff, #b3e0ff, #4fa3ff);
 
     svg {
         width: 25%;
@@ -20,8 +19,13 @@ header {
     
         h1 {
             grid-column: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: relative;
-            z-index: 1; /* This puts the title Style Stage in front of the sun */
+            z-index: 1;
+            top: 3.5em;
+            left: 2.5em;
         }
 
         h2 {
@@ -34,19 +38,18 @@ header {
             text-align: right;
         }
 
-
         &::after {
             content: "";
             position: absolute;
-            top: 75%;
-            left: 50%;
+            top: 50%;
+            left: 55%;
             transform: translate(-50%, -50%);
             width: 500px;
-            height: 500px;
+            height: 400px;
             background-image: url("/images/sun.svg");
-            background-size:75% 75%;
+            background-size: 100% 100%;
             background-repeat: no-repeat;
-            z-index: 0; /* This puts the svg behind the title Style Stage */
+            z-index: 0;
         }
     }
 }
