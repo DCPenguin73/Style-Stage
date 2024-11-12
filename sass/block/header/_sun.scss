@@ -1,8 +1,9 @@
 header {
     display: flex;
     justify-content: center;
-    padding: 4em;
-    background: radial-gradient(circle, #f0faff, #b3e0ff, #4fa3ff);
+    padding: 5em 2em;
+    background: radial-gradient(circle, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9), #4fa3ff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
     svg {
         width: 25%;
@@ -16,14 +17,14 @@ header {
         align-items: center;
         text-align: center;
         position: relative;
-    
+
         h1 {
             grid-column: 2;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            z-index: 1;
+            z-index: 1; // This puts the title Style Stage in front of the sun
             top: 3.5em;
             left: 2.5em;
         }
@@ -49,7 +50,29 @@ header {
             background-image: url("/images/sun.svg");
             background-size: 100% 100%;
             background-repeat: no-repeat;
-            z-index: 0;
+            z-index: 0; // This puts the svg behind the title Style Stage
+            animation: rotate 20s linear infinite; // Added a rotate animation to the sun svg
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        a {
+            color: #4fa3ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #2e7bcd;
+            text-decoration: underline;
         }
     }
 }
