@@ -13,4 +13,6 @@ $font-family: Arial, sans-serif;
 body {
   font-size: $font-size;
   font-family: $font-family;
+  background: radial-gradient(circle at 50% 8%, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9) 10%, (#4fa3ff) 20%, (#2d77c6) 30%,
+   (#1a4f8e) 40%, (#0d2c4f) 50%, (#06162a) 60%, (#030b15) 70%, (#000000) 80%);
 }

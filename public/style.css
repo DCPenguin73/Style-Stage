@@ -3,7 +3,7 @@
   --color-primary-alt: #6f6ffd;
   --color-secondary: #ff2868;
   --color-background: #000000;
-  --color-text: #6c58b0;
+  --color-text: rgb(108.3577067669, 88.0035714286, 175.8964285714);
   --color-light: #fff;
   --color-anchor: #a38dec;
   --font-family: "Baloo 2", sans-serif;
@@ -82,13 +82,13 @@ body {
 body {
   font-size: 1rem;
   font-family: Arial, sans-serif;
+  background: radial-gradient(circle at 50% 8%, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9) 10%, #4fa3ff 20%, #2d77c6 30%, #1a4f8e 40%, #0d2c4f 50%, #06162a 60%, #030b15 70%, #000000 80%);
 }
 
 header {
   display: flex;
   justify-content: center;
   padding: 5em 2em;
-  background: radial-gradient(circle, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9), #4fa3ff);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 header svg {
@@ -126,8 +126,8 @@ header .container::after {
   position: absolute;
   top: 50%;
   left: 55%;
-  width: 500px;
-  height: 400px;
+  width: 50%;
+  height: 50%;
   background-image: url("/images/sun.svg");
   background-size: 100% 100%;
   z-index: 0;
