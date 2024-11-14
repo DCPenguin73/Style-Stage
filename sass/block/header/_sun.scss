@@ -44,12 +44,10 @@ header {
             position: absolute;
             top: 50%;
             left: 55%;
-            transform: translate(-50%, -50%);
             width: 500px;
             height: 400px;
             background-image: url("/images/sun.svg");
             background-size: 100% 100%;
-            background-repeat: no-repeat;
             z-index: 0; // This puts the svg behind the title Style Stage
             animation: rotate 20s linear infinite; // Added a rotate animation to the sun svg
         }
