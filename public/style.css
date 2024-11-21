@@ -77,29 +77,56 @@ select {
 body {
   background-color: white;
   color: black;
-}
-
-body {
   font-size: 1rem;
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at 50% 6%, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9) 5%, #4fa3ff 10%, #2d77c6 15%, #1a4f8e 20%, #0d2c4f 25%, #06162a 30%, #030b15 40%, #000000 50%);
+}
+body .skip-link {
+  background-color: white;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  color: #007acc;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+body .skip-link:hover, body .skip-link:focus {
+  background-color: #007acc;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header {
   display: flex;
   justify-content: center;
   padding: 5em 2em;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+header .link-github {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0.5em 1em;
+  font-size: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+header .link-github:hover, header .link-github:focus {
+  background-color: #007acc;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 header svg {
-  width: 25%;
-  height: 25%;
+  width: 1.5em;
+  height: 1.5em;
+  fill: #ffffff;
 }
 header .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  align-items: center;
   text-align: center;
   position: relative;
 }
@@ -110,22 +137,28 @@ header .container h1 {
   justify-content: center;
   position: relative;
   z-index: 1;
-  top: 3.5em;
-  left: 2.5em;
+  top: 4em;
 }
 header .container h2 {
   grid-column: 1;
-  text-align: left;
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  padding: 0.5rem;
 }
 header .container p {
   grid-column: 3;
-  text-align: right;
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 5;
+  padding-right: 1.5rem;
 }
 header .container::after {
   content: "";
   position: absolute;
   top: 50%;
-  left: 55%;
+  left: 50%;
   width: 300px;
   height: 300px;
   background-image: url("/images/sun.svg");
@@ -143,11 +176,10 @@ header .container::after {
   }
 }
 header .container a {
-  color: #4fa3ff;
+  color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 header .container a:hover {
-  color: #2e7bcd;
   text-decoration: underline;
 }

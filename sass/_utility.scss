@@ -1,18 +1,44 @@
 // Variables for background and text color
 $background-color: white;
 $text-color: black;
-// set background and text color
-body {
-  background-color: $background-color;
-  color: $text-color;
-}
+
 // Variables for font size and font family
 $font-size: 1rem;
 $font-family: Arial, sans-serif;
-// set font size and font family
+
+// Set background and text color, font size, family, and gradient
 body {
+  background-color: $background-color;
+  color: $text-color;
   font-size: $font-size;
   font-family: $font-family;
-  background: radial-gradient(circle at 50% 6%, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9) 5%, (#4fa3ff) 10%, (#2d77c6) 15%,
-   (#1a4f8e) 20%, (#0d2c4f) 25%, (#06162a) 30%, (#030b15) 40%, (#000000) 50%);
+  background: radial-gradient(circle at 50% 6%,
+      rgba(240, 250, 255, 0.8),
+      rgba(179, 224, 255, 0.9) 5%,
+      #4fa3ff 10%,
+      #2d77c6 15%,
+      #1a4f8e 20%,
+      #0d2c4f 25%,
+      #06162a 30%,
+      #030b15 40%,
+      #000000 50%);
+
+  .skip-link {
+    background-color: white;
+    padding: 0.5em 1em;
+    font-size: 1rem;
+    color: #007acc;
+    text-decoration: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover,
+    &:focus {
+      background-color: #007acc;
+      color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  }
+
 }
