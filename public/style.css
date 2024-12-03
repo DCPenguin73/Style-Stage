@@ -76,7 +76,7 @@ select {
 }
 body {
   background-color: white;
-  color: black;
+  color: white;
   font-size: 1rem;
   font-family: Arial, sans-serif;
   background: radial-gradient(circle at 50% 6%, rgba(240, 250, 255, 0.8), rgba(179, 224, 255, 0.9) 5%, #4fa3ff 10%, #2d77c6 15%, #1a4f8e 20%, #0d2c4f 25%, #06162a 30%, #030b15 40%, #000000 50%);
@@ -95,6 +95,9 @@ body .skip-link:hover, body .skip-link:focus {
   background-color: #007acc;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+body a {
+  color: white;
 }
 
 header {
@@ -182,4 +185,8 @@ header .container a {
 }
 header .container a:hover {
   text-decoration: underline;
+}
+
+main #about {
+  padding: 10px;
 }
