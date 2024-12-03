@@ -1,6 +1,7 @@
 // Variables for background and text color
 $background-color: white;
-$text-color: black;
+$text-color: white;
+$links-color: white;
 
 // Variables for font size and font family
 $font-size: 1rem;
@@ -39,6 +40,10 @@ body {
       color: white;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
+  }
+
+  a {
+    color: $links-color;
   }
 
 }
