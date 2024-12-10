@@ -3,10 +3,10 @@
   --color-primary-alt: #6f6ffd;
   --color-secondary: #ff2868;
   --color-background: #000000;
-  --color-text: #6c58b0;
+  --color-text: rgb(108.3577067669, 88.0035714286, 175.8964285714);
   --color-light: #fff;
   --color-anchor: #a38dec;
-  --font-family: "Baloo 2", sans-serif;
+  --font-family: "Orbitron", "Baloo 2", sans-serif;
   --font-weight-strong: 500;
   --font-size-h1: 6rem;
   --font-size-h2: 3rem;
@@ -150,4 +150,211 @@ header .container a {
 header .container a:hover {
   color: #2e7bcd;
   text-decoration: underline;
+}
+
+/* Style the nav and make it flex */
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  display: flex; /* Enable Flexbox for horizontal layout */
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between the items */
+  padding: 0; /* Remove default padding */
+  margin: 20px 0; /* Add some margin for spacing */
+}
+
+/* Style individual list items */
+nav ul li {
+  position: relative; /* Needed for the cloud effects */
+  display: flex;
+  flex: 1 1 auto; /* Allows the items to shrink and grow as needed */
+  min-width: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white; /* Default text color */
+  text-decoration: none;
+  padding: 20px 40px; /* Padding to make room for cloud shapes */
+  border-radius: 12px; /* Optional: rounded edges */
+  background-color: transparent; /* Make the background transparent */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect for scaling */
+nav ul li:hover {
+  transform: scale(1.1);
+  color: #8e44ad; /* Change text color to deep purple on hover */
+}
+
+/* Cloud effect using ::before and ::after */
+nav ul li::before,
+nav ul li::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 50%; /* Keep the circles circular */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Cloud shapes */
+nav ul li::before {
+  width: 100px; /* Set initial size for the first cloud */
+  height: 100px; /* Set initial size for the first cloud */
+  top: -30px; /* Position the first cloud */
+  left: 25px; /* Position the first cloud */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+nav ul li::after {
+  width: 120px; /* Set initial size for the second cloud */
+  height: 120px; /* Set initial size for the second cloud */
+  bottom: -30px; /* Position the second cloud */
+  right: 25px; /* Position the second cloud */
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Expand clouds only on hover over the li */
+nav ul li:hover::before {
+  width: 120px; /* Increase size on hover */
+  height: 120px; /* Increase size on hover */
+  top: -40px; /* Adjust position when hovering */
+  left: 10px; /* Adjust position when hovering */
+}
+
+nav ul li:hover::after {
+  width: 140px; /* Increase size on hover */
+  height: 140px; /* Increase size on hover */
+  bottom: -40px; /* Adjust position when hovering */
+  right: 20px; /* Adjust position when hovering */
+}
+
+/* Style the links inside the list items */
+nav ul li a {
+  position: relative;
+  z-index: 2; /* Ensure text is on top of the cloud */
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+/* Hover effect on links */
+nav ul li a:hover {
+  color: #8e44ad; /* Change link color to deep purple on hover */
+}
+
+main > div > article:first-of-type > section:first-of-type h2:first-of-type {
+  position: relative;
+  font-size: var(--font-size-h3);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1em 0;
+}
+
+main > div > article:first-of-type > section:first-of-type h2:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
+  background: url("/images/mercury.svg") no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 58.6s linear infinite; /* Add animation */
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+main > div > article:first-of-type > section:nth-of-type(2) h2:first-of-type {
+  position: relative;
+  font-size: var(--font-size-h3);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1em 0;
+}
+
+main > div > article:first-of-type > section:nth-of-type(2) h2:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px; /* Size for Venus */
+  height: 150px; /* Size for Venus */
+  background: url("/images/venus.svg") no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 243s linear infinite; /* Add animation */
+}
+
+main > div > article:nth-of-type(2) > section:first-of-type h2:first-of-type {
+  position: relative;
+  font-size: var(--font-size-h3);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1em 0;
+}
+
+main > div > article:nth-of-type(2) > section:first-of-type h2:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px; /* Size for Earth */
+  height: 120px; /* Size for Earth */
+  background: url("/images/earth.svg") no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 60s linear infinite; /* Earth: 1 minute */
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type {
+  position: relative;
+  font-size: var(--font-size-h3);
+  color: var(--color-light);
+  text-align: center;
+  padding: 1em 0;
+}
+
+main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150px; /* Size for Mars */
+  height: 150px; /* Size for Mars */
+  background: url("/images/mars.svg") no-repeat center center; /* Adjusted path */
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 88s linear infinite; /* Mars: 88 minutes */
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }

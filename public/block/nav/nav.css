@@ -1,1 +1,93 @@
+/* Style the nav and make it flex */
+nav ul {
+  list-style-type: none; /* Remove bullets */
+  display: flex; /* Enable Flexbox for horizontal layout */
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between the items */
+  padding: 0; /* Remove default padding */
+  margin: 20px 0; /* Add some margin for spacing */
+}
 
+/* Style individual list items */
+nav ul li {
+  position: relative; /* Needed for the cloud effects */
+  display: flex;
+  flex: 1 1 auto; /* Allows the items to shrink and grow as needed */
+  min-width: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white; /* Default text color */
+  text-decoration: none;
+  padding: 20px 40px; /* Padding to make room for cloud shapes */
+  border-radius: 12px; /* Optional: rounded edges */
+  background-color: transparent; /* Make the background transparent */
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Add hover effect for scaling */
+nav ul li:hover {
+  transform: scale(1.1);
+  color: #8e44ad; /* Change text color to deep purple on hover */
+}
+
+/* Cloud effect using ::before and ::after */
+nav ul li::before,
+nav ul li::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 50%; /* Keep the circles circular */
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Cloud shapes */
+nav ul li::before {
+  width: 100px; /* Set initial size for the first cloud */
+  height: 100px; /* Set initial size for the first cloud */
+  top: -30px; /* Position the first cloud */
+  left: 25px; /* Position the first cloud */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+nav ul li::after {
+  width: 120px; /* Set initial size for the second cloud */
+  height: 120px; /* Set initial size for the second cloud */
+  bottom: -30px; /* Position the second cloud */
+  right: 25px; /* Position the second cloud */
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+/* Expand clouds only on hover over the li */
+nav ul li:hover::before {
+  width: 120px; /* Increase size on hover */
+  height: 120px; /* Increase size on hover */
+  top: -40px; /* Adjust position when hovering */
+  left: 10px; /* Adjust position when hovering */
+}
+
+nav ul li:hover::after {
+  width: 140px; /* Increase size on hover */
+  height: 140px; /* Increase size on hover */
+  bottom: -40px; /* Adjust position when hovering */
+  right: 20px; /* Adjust position when hovering */
+}
+
+/* Style the links inside the list items */
+nav ul li a {
+  position: relative;
+  z-index: 2; /* Ensure text is on top of the cloud */
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  padding: 0 10px;
+  display: inline-block;
+}
+
+/* Hover effect on links */
+nav ul li a:hover {
+  color: #8e44ad; /* Change link color to deep purple on hover */
+}
