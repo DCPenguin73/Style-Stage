@@ -105,7 +105,8 @@ header {
   justify-content: center;
   padding: 5em 2em;
 }
-header .link-github {
+
+.link-github {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -116,16 +117,20 @@ header .link-github {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-header .link-github:hover, header .link-github:focus {
+
+.link-github:hover,
+.link-github:focus {
   background-color: #007acc;
   color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-header svg {
+
+svg {
   width: 1.5em;
   height: 1.5em;
   fill: #ffffff;
 }
+
 header .container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -133,16 +138,45 @@ header .container {
   text-align: center;
   position: relative;
 }
-header .container h1 {
+
+h1 {
   grid-column: 2;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 1;
-  top: 4em;
+  top: 1em;
+  font-size: var(--font-size-h2);
+  color: var(--color-light);
+  text-align: center;
+  padding: -0.5em 0;
+  padding-bottom: 4em;
 }
-header .container h2 {
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 1em;
+  left: 50%;
+  width: 350px; /* Adjust size as needed */
+  height: 350px; /* Adjust size as needed */
+  background: url("/images/sun.svg") no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -5; /* Ensure it is behind the text */
+  animation: spin 58.6s linear infinite; /* Add animation */
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+h2 {
   grid-column: 1;
   font-size: 2rem;
   margin-top: 2rem;
@@ -150,26 +184,14 @@ header .container h2 {
   text-align: center;
   padding: 0.5rem;
 }
-header .container p {
+
+p {
   grid-column: 3;
   font-size: 1.2rem;
-  color: #333;
-  line-height: 5;
+  line-height: 1.5;
   padding-right: 1.5rem;
 }
-header .container::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 300px;
-  height: 300px;
-  background-image: url("/images/sun.svg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  z-index: 0;
-  animation: rotate 20s linear infinite;
-}
+
 @keyframes rotate {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -178,14 +200,82 @@ header .container::after {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
-header .container a {
+a {
   color: #ffffff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
-header .container a:hover {
-  color: #2e7bcd;
+
+a:hover {
   text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header .container {
+    grid-template-columns: 1fr;
+  }
+  h1, h2, p {
+    grid-column: 1;
+  }
+  h1 {
+    top: 2em;
+  }
+  p {
+    padding-right: 0;
+  }
+}
+@media (max-width: 480px) {
+  header {
+    padding: 5em 1em;
+  }
+  h1 {
+    font-size: var(--font-size-h2);
+    top: 1em;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .link-github {
+    font-size: 0.875rem;
+    padding: 0.5em;
+  }
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+main #about {
+  padding: 10px;
+  display: grid;
+  gap: 10px;
+}
+main #about .container {
+  padding: 1.5em;
+  margin: 1em auto;
+  border-radius: 10px;
+}
+main #about h2 {
+  text-align: center;
+  font-size: 2.5em;
+}
+main #about p {
+  margin-bottom: 1em;
+  font-size: 1rem;
+}
+main #about blockquote {
+  margin: 1.5em 0;
+  padding: 1em;
+  border-left: 5px solid #3a0ca3;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+main #about blockquote p {
+  font-style: italic;
+  margin: 0;
 }
 
 /* Style the nav and make it flex */
@@ -393,36 +483,4 @@ main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type::be
   to {
     transform: translate(-50%, -50%) rotate(360deg);
   }
-}
-
-main #about {
-  padding: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-}
-main #about .container {
-  padding: 1.5em;
-  margin: 1em auto;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-main #about h2 {
-  text-align: center;
-  font-size: 2.5em;
-}
-main #about p {
-  margin-bottom: 1em;
-  font-size: 1rem;
-}
-main #about blockquote {
-  margin: 1.5em 0;
-  padding: 1em;
-  border-left: 5px solid #3a0ca3;
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-main #about blockquote p {
-  font-style: italic;
-  margin: 0;
 }
