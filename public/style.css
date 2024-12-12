@@ -301,7 +301,7 @@ main .container ul li {
   justify-content: center;
   align-items: center;
   height: 120px;
-  background: url("/images/asteroid.svg") no-repeat center center;
+  background: url("/images/asteroid2.svg") no-repeat center center;
   background-size: contain;
   color: white;
   font-weight: bold;
