@@ -13,7 +13,7 @@ body {
   color: $text-color;
   font-size: $font-size;
   font-family: $font-family;
-  background: radial-gradient(circle at 50% 6%,
+  background: url('../images/space.svg'), radial-gradient(circle at 50% 6%,
       rgba(240, 250, 255, 0.8),
       rgba(179, 224, 255, 0.9) 5%,
       #4fa3ff 10%,
@@ -23,6 +23,7 @@ body {
       #06162a 30%,
       #030b15 40%,
       #000000 50%);
+  //  background-image: url('../images/space.svg');
 
   .skip-link {
     background-color: white;
