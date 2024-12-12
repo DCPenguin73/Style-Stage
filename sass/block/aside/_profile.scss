@@ -1,8 +1,9 @@
 .profile {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.1rem;
+    right: 0.1rem;
     background-color: white;
+    opacity: 0.8;
     padding: 0.5em 1em;
     font-size: 1rem;
     color: #007acc;
@@ -25,4 +26,23 @@
 
 .profile:hover a {
     color: white;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+    .profile {
+        position: static;
+        margin-top: 1rem;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile {
+        font-size: 0.9rem;
+        padding: 0.4em 0.8em;
+    }
 }
