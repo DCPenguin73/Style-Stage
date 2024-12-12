@@ -1,0 +1,22 @@
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- Base planet -->
+  <circle cx="60" cy="60" r="60" fill="#D2B48C"/> <!-- Beige base -->
+
+  <!-- Atmospheric bands -->
+  <path d="M0 30 Q20 40 120 35 Q100 25 0 30 Z" fill="#A0522D"/>
+  <path d="M0 45 Q30 50 120 50 Q90 40 0 45 Z" fill="#8B4513"/>
+  <path d="M0 60 Q40 70 120 65 Q80 55 0 60 Z" fill="#D2691E"/>
+  <path d="M0 75 Q30 85 120 80 Q90 70 0 75 Z" fill="#A0522D" opacity="0.8"/>
+  <path d="M0 90 Q20 95 120 90 Q100 85 0 90 Z" fill="#8B4513" opacity="0.7"/>
+
+  <!-- Great Red Spot -->
+  <ellipse cx="90" cy="70" rx="12" ry="8" fill="#FF4500" stroke="#8B0000" stroke-width="2" opacity="0.9"/>
+
+  <!-- Lighter streaks for atmosphere -->
+  <path d="M10 40 Q40 50 110 45 Q80 35 10 40 Z" fill="#F4A460" opacity="0.5"/>
+  <path d="M15 70 Q50 75 115 72 Q80 65 15 70 Z" fill="#F4A460" opacity="0.4"/>
+
+  <!-- Small storms -->
+  <circle cx="40" cy="50" r="6" fill="#8B0000" opacity="0.6"/>
+  <circle cx="70" cy="90" r="5" fill="#8B4513" opacity="0.5"/>
+</svg>
