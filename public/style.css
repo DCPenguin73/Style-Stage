@@ -3,7 +3,7 @@
   --color-primary-alt: #6f6ffd;
   --color-secondary: #ff2868;
   --color-background: #000000;
-  --color-text: #6c58b0;
+  --color-text: rgb(108.3577067669, 88.0035714286, 175.8964285714);
   --color-light: #fff;
   --color-anchor: #a38dec;
   --font-family: "Orbitron", "Baloo 2", sans-serif;
@@ -159,17 +159,13 @@ h1::before {
   position: absolute;
   top: 1em;
   left: 50%;
-  width: 350px;
-  /* Adjust size as needed */
-  height: 350px;
-  /* Adjust size as needed */
+  width: 350px; /* Adjust size as needed */
+  height: 350px; /* Adjust size as needed */
   background: url("/images/sun.svg") no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: -5;
-  /* Ensure it is behind the text */
-  animation: spin 58.6s linear infinite;
-  /* Add animation */
+  z-index: -5; /* Ensure it is behind the text */
+  animation: spin 58.6s linear infinite; /* Add animation */
 }
 
 @keyframes spin {
@@ -219,15 +215,12 @@ a:hover {
   header .container {
     grid-template-columns: 1fr;
   }
-
   h1, h2, p {
     grid-column: 1;
   }
-
   h1 {
     top: 2em;
   }
-
   p {
     padding-right: 0;
   }
@@ -236,25 +229,20 @@ a:hover {
   header {
     padding: 5em 1em;
   }
-
   h1 {
     font-size: var(--font-size-h2);
     top: 1em;
   }
-
   h2 {
     font-size: 1.5rem;
   }
-
   p {
     font-size: 1rem;
   }
-
   .link-github {
     font-size: 0.875rem;
     padding: 0.5em;
   }
-
   svg {
     width: 1em;
     height: 1em;
@@ -311,50 +299,37 @@ main .container ul li {
 
 /* Style the nav and make it flex */
 nav ul {
-  list-style-type: none;
-  /* Remove bullets */
-  display: flex;
-  /* Enable Flexbox for horizontal layout */
+  list-style-type: none; /* Remove bullets */
+  display: flex; /* Enable Flexbox for horizontal layout */
   flex-wrap: wrap;
-  justify-content: center;
-  /* Center items horizontally */
-  gap: 20px;
-  /* Add space between the items */
-  padding: 0;
-  /* Remove default padding */
-  margin: 20px 0;
-  /* Add some margin for spacing */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Add space between the items */
+  padding: 0; /* Remove default padding */
+  margin: 20px 0; /* Add some margin for spacing */
 }
 
 /* Style individual list items */
 nav ul li {
-  position: relative;
-  /* Needed for the cloud effects */
+  position: relative; /* Needed for the cloud effects */
   display: flex;
-  flex: 1 1 auto;
-  /* Allows the items to shrink and grow as needed */
+  flex: 1 1 auto; /* Allows the items to shrink and grow as needed */
   min-width: 50px;
   align-items: center;
   justify-content: center;
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: white;
-  /* Default text color */
+  color: white; /* Default text color */
   text-decoration: none;
-  padding: 20px 40px;
-  /* Padding to make room for cloud shapes */
-  border-radius: 12px;
-  /* Optional: rounded edges */
-  background-color: transparent;
-  /* Make the background transparent */
+  padding: 20px 40px; /* Padding to make room for cloud shapes */
+  border-radius: 12px; /* Optional: rounded edges */
+  background-color: transparent; /* Make the background transparent */
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Add hover effect for scaling */
 nav ul li:hover {
   transform: scale(1.1);
-  color: #8e44ad;
-  /* Change text color to deep purple on hover */
+  color: #481f03; /* Change text color to deep purple on hover */
 }
 
 /* Cloud effect using ::before and ::after */
@@ -363,67 +338,47 @@ nav ul li::after {
   content: "";
   position: absolute;
   background-color: white;
-  border-radius: 50%;
-  /* Keep the circles circular */
+  border-radius: 50%; /* Keep the circles circular */
   opacity: 0.7;
   transition: all 0.3s ease;
 }
 
 /* Cloud shapes */
 nav ul li::before {
-  width: 100px;
-  /* Set initial size for the first cloud */
-  height: 100px;
-  /* Set initial size for the first cloud */
-  top: -30px;
-  /* Position the first cloud */
-  left: 25px;
-  /* Position the first cloud */
-  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
-  /* Box shadow for depth */
+  width: 100px; /* Set initial size for the first cloud */
+  height: 100px; /* Set initial size for the first cloud */
+  top: -30px; /* Position the first cloud */
+  left: 25px; /* Position the first cloud */
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
 nav ul li::after {
-  width: 120px;
-  /* Set initial size for the second cloud */
-  height: 120px;
-  /* Set initial size for the second cloud */
-  bottom: -30px;
-  /* Position the second cloud */
-  right: 25px;
-  /* Position the second cloud */
-  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1);
-  /* Box shadow for depth */
+  width: 120px; /* Set initial size for the second cloud */
+  height: 120px; /* Set initial size for the second cloud */
+  bottom: -30px; /* Position the second cloud */
+  right: 35px; /* Position the second cloud */
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
 }
 
 /* Expand clouds only on hover over the li */
 nav ul li:hover::before {
-  width: 120px;
-  /* Increase size on hover */
-  height: 120px;
-  /* Increase size on hover */
-  top: -40px;
-  /* Adjust position when hovering */
-  left: 10px;
-  /* Adjust position when hovering */
+  width: 120px; /* Increase size on hover */
+  height: 120px; /* Increase size on hover */
+  top: -40px; /* Adjust position when hovering */
+  left: 20px; /* Adjust position when hovering */
 }
 
 nav ul li:hover::after {
-  width: 140px;
-  /* Increase size on hover */
-  height: 140px;
-  /* Increase size on hover */
-  bottom: -40px;
-  /* Adjust position when hovering */
-  right: 20px;
-  /* Adjust position when hovering */
+  width: 140px; /* Increase size on hover */
+  height: 140px; /* Increase size on hover */
+  bottom: -40px; /* Adjust position when hovering */
+  right: 20px; /* Adjust position when hovering */
 }
 
 /* Style the links inside the list items */
 nav ul li a {
   position: relative;
-  z-index: 2;
-  /* Ensure text is on top of the cloud */
+  z-index: 2; /* Ensure text is on top of the cloud */
   font-weight: bold;
   color: #333;
   text-decoration: none;
@@ -433,8 +388,7 @@ nav ul li a {
 
 /* Hover effect on links */
 nav ul li a:hover {
-  color: #8e44ad;
-  /* Change link color to deep purple on hover */
+  color: #481f03; /* Change link color to deep purple on hover */
 }
 
 main > div > article:first-of-type > section:first-of-type h2:first-of-type {
@@ -450,17 +404,13 @@ main > div > article:first-of-type > section:first-of-type h2:first-of-type::bef
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100px;
-  /* Adjust size as needed */
-  height: 100px;
-  /* Adjust size as needed */
+  width: 100px; /* Adjust size as needed */
+  height: 100px; /* Adjust size as needed */
   background: url("/images/mercury.svg") no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: -1;
-  /* Ensure it is behind the text */
-  animation: spin 58.6s linear infinite;
-  /* Add animation */
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 58.6s linear infinite; /* Add animation */
 }
 
 @keyframes spin {
@@ -484,17 +434,13 @@ main > div > article:first-of-type > section:nth-of-type(2) h2:first-of-type::be
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;
-  /* Size for Venus */
-  height: 150px;
-  /* Size for Venus */
+  width: 150px; /* Size for Venus */
+  height: 150px; /* Size for Venus */
   background: url("/images/venus.svg") no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: -1;
-  /* Ensure it is behind the text */
-  animation: spin 243s linear infinite;
-  /* Add animation */
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 243s linear infinite; /* Add animation */
 }
 
 main > div > article:nth-of-type(2) > section:first-of-type h2:first-of-type {
@@ -510,17 +456,13 @@ main > div > article:nth-of-type(2) > section:first-of-type h2:first-of-type::be
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 120px;
-  /* Size for Earth */
-  height: 120px;
-  /* Size for Earth */
+  width: 120px; /* Size for Earth */
+  height: 120px; /* Size for Earth */
   background: url("/images/earth.svg") no-repeat center center;
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: -1;
-  /* Ensure it is behind the text */
-  animation: spin 60s linear infinite;
-  /* Earth: 1 minute */
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 60s linear infinite; /* Earth: 1 minute */
 }
 
 @keyframes spin {
@@ -544,18 +486,13 @@ main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type::be
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 150px;
-  /* Size for Mars */
-  height: 150px;
-  /* Size for Mars */
-  background: url("/images/mars.svg") no-repeat center center;
-  /* Adjusted path */
+  width: 150px; /* Size for Mars */
+  height: 150px; /* Size for Mars */
+  background: url("/images/mars.svg") no-repeat center center; /* Adjusted path */
   background-size: contain;
   transform: translate(-50%, -50%);
-  z-index: -1;
-  /* Ensure it is behind the text */
-  animation: spin 88s linear infinite;
-  /* Mars: 88 minutes */
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 88s linear infinite; /* Mars: 88 minutes */
 }
 
 @keyframes spin {
@@ -623,6 +560,7 @@ main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type::be
   position: absolute;
   top: 50%;
   left: 50%;
+<<<<<<< HEAD
   width: 200px;
   /* Size for Jupiter */
   height: 200px;
@@ -634,6 +572,15 @@ main > div > article:nth-of-type(3) > section:first-of-type h2:first-of-type::be
   /* Ensure it is behind the text */
   animation: spin 24.75s linear infinite;
   /* Jupiter: 10 hours */
+=======
+  width: 200px; /* Size for Jupiter */
+  height: 200px; /* Size for Jupiter */
+  background: url("/images/jupiter.svg") no-repeat center center;
+  background-size: contain;
+  transform: translate(-50%, -50%);
+  z-index: -1; /* Ensure it is behind the text */
+  animation: spin 24.75s linear infinite; /* Jupiter: 10 hours */
+>>>>>>> 536e964e1ca9d716579260649e77abcf6bd5694c
 }
 
 @keyframes spin {
