@@ -9,11 +9,14 @@
 @use "utility";
 @use "block/header/sun";
 @use "block/main/about";
+@use "block/main/guidelines";
+@use "block/main/contribute";
 @use "block/nav/nav";
 @use "block/mercury";
 @use "block/venus";
 @use "block/earth";
 @use "block/mars";
 @use "block/aside/profile";
+@use "block/aside/styles";
 @use "block/jupiter";
 @use "block/footer/footer"

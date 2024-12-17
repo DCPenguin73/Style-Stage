@@ -42,7 +42,7 @@ nav ul li {
 /* Add hover effect for scaling */
 nav ul li:hover {
   transform: scale(1.1);
-  color: #8e44ad;
+  color: #481f03;
   /* Change text color to deep purple on hover */
 }
 
@@ -79,7 +79,7 @@ nav ul li::after {
   /* Set initial size for the second cloud */
   bottom: -30px;
   /* Position the second cloud */
-  right: 25px;
+  right: 35px;
   /* Position the second cloud */
   box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.1);
   /* Box shadow for depth */
@@ -93,7 +93,7 @@ nav ul li:hover::before {
   /* Increase size on hover */
   top: -40px;
   /* Adjust position when hovering */
-  left: 10px;
+  left: 20px;
   /* Adjust position when hovering */
 }
 
@@ -122,6 +122,6 @@ nav ul li a {
 
 /* Hover effect on links */
 nav ul li a:hover {
-  color: #8e44ad;
+  color: #481f03;
   /* Change link color to deep purple on hover */
 }
