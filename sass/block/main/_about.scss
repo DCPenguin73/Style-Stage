@@ -1,17 +1,18 @@
 main {
+    margin: 5em;
+    h2 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+
     #about {
         padding: 10px;
         gap: 10px;
 
         .container {
             padding: 1.5em;
-            margin: 5em;
+            // margin: 5em;
             border-radius: 10px;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2.5em;
         }
 
         p {
